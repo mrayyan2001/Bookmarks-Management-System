@@ -1,0 +1,52 @@
+﻿@page
+@model BookmarkManagementSystem.Pages.Bookmarks.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Create New Bookmark</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Add Bookmark Details</h5>
+            <hr />
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Bookmark.Title" class="form-label"></label>
+                    <input asp-for="Bookmark.Title" class="form-control" />
+                    <span asp-validation-for="Bookmark.Title" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Bookmark.URL" class="form-label"></label>
+                    <input asp-for="Bookmark.URL" class="form-control" />
+                    <span asp-validation-for="Bookmark.URL" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save"></i> Create
+                    </button>
+                    <a asp-page="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<!-- Ensure to include Bootstrap and optionally Bootstrap Icons in your layout file -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
