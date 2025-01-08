@@ -79,3 +79,35 @@ namespace BookmarkManagementSystem.Model
 ## Frontend
 
 For the frontend, we used Bootstrap to style the application.
+
+## Images of the application
+
+### Home Page
+
+<p align="center">
+  <img src="./Images/image.png" alt="Home Page" width="600">
+</p>
+
+### Create Bookmark
+
+<p align="center">
+  <img src="./Images/image-1.png" alt="Create Bookmark" width="600">
+</p>
+
+### Edit Bookmark
+
+<p align="center">
+  <img src="./Images/image-2.png" alt="Edit Bookmark" width="600">
+</p>
+
+### Delete Bookmark
+
+<p align="center">
+  <img src="./Images/image-3.png" alt="Delete Bookmark" width="600">
+</p>
+
+### Details Bookmark
+
+<p align="center">
+  <img src="./Images/image-4.png" alt="Details Bookmark" width="600">
+</p>

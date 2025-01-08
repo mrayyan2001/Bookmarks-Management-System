@@ -261,3 +261,4 @@ C:\Users\mmria\Desktop\Training\BookmarkManagementSystem\obj\Debug\net8.0\refint
 C:\Users\mmria\Desktop\Training\BookmarkManagementSystem\obj\Debug\net8.0\BookmarkManagementSystem.pdb
 C:\Users\mmria\Desktop\Training\BookmarkManagementSystem\obj\Debug\net8.0\BookmarkManagementSystem.genruntimeconfig.cache
 C:\Users\mmria\Desktop\Training\BookmarkManagementSystem\obj\Debug\net8.0\ref\BookmarkManagementSystem.dll
+C:\Users\mmria\Desktop\Training\BookmarkManagementSystem\obj\Debug\net8.0\BookmarkManagementSystem.sourcelink.json
