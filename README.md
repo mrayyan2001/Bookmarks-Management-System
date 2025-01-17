@@ -111,3 +111,84 @@ For the frontend, we used Bootstrap to style the application.
 <p align="center">
   <img src="./Images/image-4.png" alt="Details Bookmark" width="600">
 </p>
+
+## UML Diagrams
+
+![alt text](image.png)
+
+```plantUML
+@startuml
+package "BookmarkManagementSystem.Model" {
+    class Bookmark {
+        - int ID
+        - string Title
+        - string URL
+    }
+}
+@enduml
+```
+
+![alt text](image-1.png)
+
+```plantUML
+@startuml
+
+actor User
+
+usecase "Create a Bookmark" as UC_Create
+usecase "View Bookmarks" as UC_View
+usecase "Update a Bookmark" as UC_Update
+usecase "Delete a Bookmark" as UC_Delete
+usecase "Open a Bookmark" as UC_Open
+
+User --> UC_Create
+User --> UC_View
+User --> UC_Update
+User --> UC_Delete
+User --> UC_Open
+
+@enduml
+```
+
+![alt text](image-2.png)
+
+```plantUML
+@startuml
+
+start
+
+:User navigates to the system;
+if (Choose Action?) then (Create a Bookmark)
+    :Display Create Form;
+    :User inputs Title and URL;
+    if (Valid Input?) then (Yes)
+        :Save Bookmark to Database;
+    else (No)
+        :Show Validation Errors;
+    endif;
+    :Redirect to Bookmark List;
+elseif (View Bookmarks)
+    :Retrieve and Display Bookmark List;
+    :User selects a Bookmark;
+    :Display Bookmark Details;
+elseif (Update a Bookmark)
+    :Display Edit Form;
+    :User updates Title and/or URL;
+    if (Valid Input?) then (Yes)
+        :Save Changes to Database;
+    else (No)
+        :Show Validation Errors;
+    endif;
+    :Redirect to Bookmark List;
+elseif (Delete a Bookmark)
+    :User confirms Deletion;
+    :Remove Bookmark from Database;
+    :Redirect to Bookmark List;
+elseif (Open a Bookmark)
+    :Open URL in Browser;
+endif;
+
+stop
+
+@enduml
+```
